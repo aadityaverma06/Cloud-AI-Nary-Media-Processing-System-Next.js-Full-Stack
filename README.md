@@ -5,8 +5,8 @@ The Web App is a smart, AI-powered Media Utility system designed to provide proc
 ## ✅ Features
 
 - User Authentication and Account Management using Clerk.
-- AI-Powered Image Cropping — automatically focuses on faces, text, or main subjects.
-- AI Video Compression — intelligently reduces file size for faster uploads and sharing.
+- AI-Powered Image Cropping - automatically focuses on faces, text, or main subjects.
+- AI Video Compression - intelligently reduces file size for faster uploads and sharing.
 - AI generated preview - Access a preview of the uploaded video focussing on the main content.
 - Discover uploaded videos from other users seamlessly without Authentication.
 - Smooth and Responsive UI with Tailwind & Daisy UI components.
