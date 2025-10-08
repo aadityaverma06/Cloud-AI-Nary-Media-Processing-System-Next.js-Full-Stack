@@ -30,14 +30,14 @@ function Home() {
 
   return (
     <div className="min-h-screen p-8 flex flex-col gap-4 text-gray-300 relative">
-      <h2 className="text-3xl font-bold">
+      <h2 className="text-xl sm:text-2xl md:text-3xl font-bold">
         {videoList === null || videoList?.length === 0
           ? "No Videos Found"
           : videoList?.length === 1
           ? "1 Video"
           : `${videoList?.length} Videos`}
       </h2>
-      <div className="flex gap-4 flex-wrap">
+      <div className="flex gap-4 flex-wrap justify-center">
         {videoList != null ? (
           videoList.map((video) => (
             <VideoCard video={video} key={video.publicId} />

@@ -44,43 +44,48 @@ function VideoUpload() {
   }
 
   return (
-    <div className="max-h-screen p-10 text-gray-300">
+    <div className="min-h-screen p-5 md:p-10 text-gray-300">
       <div className="flex flex-col gap-8">
-        <h2 className="text-3xl pt-2 font-bold">Upload Video</h2>
+        <h2 className="text-lg sm:text-2xl md:text-3xl pt-2 font-bold">
+          Upload Video
+        </h2>
         <fieldset className="fieldset">
-          <legend className="fieldset-legend text-lg">Title</legend>
+          <legend className="fieldset-legend text-sm sm:text-base md:text-lg">
+            Title
+          </legend>
           <input
             type="text"
-            className="input input-lg w-full 
-            !rounded-lg"
+            className="input input-sm sm:input-md md:input-lg w-full !rounded-lg"
             placeholder="Enter Title here"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
           />
         </fieldset>
         <fieldset className="fieldset">
-          <legend className="fieldset-legend text-lg">Description</legend>
+          <legend className="fieldset-legend text-sm sm:text-base md:text-lg">
+            Description
+          </legend>
           <textarea
-            className="textarea textarea-lg w-full rounded-xl"
+            className="textarea textarea-sm sm:textarea-md md:textarea-lg w-full rounded-xl"
             placeholder="Enter Description here"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
           ></textarea>
         </fieldset>
         <fieldset className="fieldset">
-          <legend className="fieldset-legend text-lg">
+          <legend className="fieldset-legend text-sm sm:text-base md:text-lg  ">
             Video File (Max. Size: 15 MB)
           </legend>
           <input
             type="file"
-            className="file:bg-[#605dfe] file:text-[#1a1a1a] cursor-pointer file:px-4 file:py-3 file:font-bold rounded-lg border-1 border-[#605dfe] bg-gray-700/30 text-lg"
+            className="file:bg-[#605dfe] file:text-[#1a1a1a] cursor-pointer file:px-4 file:py-3 file:font-bold rounded-lg border-1 border-[#605dfe] bg-gray-700/30 text-sm sm:text-base md:text-lg  "
             onChange={(e) => setVideoFile(e.target.files[0])}
             ref={videoRef}
           />
         </fieldset>
         {!isUploading && (
           <button
-            className="btn btn-primary btn-outline w-max text-lg !rounded-lg"
+            className="btn btn-primary btn-outline w-max text-sm sm:text-base md:text-lg   !rounded-lg"
             onClick={handleVideoFileUpload}
           >
             Upload Video

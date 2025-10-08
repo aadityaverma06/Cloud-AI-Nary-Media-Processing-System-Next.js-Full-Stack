@@ -77,9 +77,9 @@ function SocialImages() {
     toast.success("Downloading Image...");
   };
   return (
-    <div className="flex flex-col gap-16 items-center min-h-screen text-[#d1d5dc] bg-base-300">
+    <div className="flex flex-col gap-16 items-center min-h-screen text-[#d1d5dc] bg-base-300 pb-8">
       <div className="flex flex-col">
-        <h2 className="text-3xl pt-12 font-bold">
+        <h2 className="text-lg sm:text-2xl md:text-3xl pt-12 font-bold">
           Social Media{" "}
           <span className="bg-clip-text font-bold bg-gradient-to-r text-transparent  from-orange-500 via-pink-600 to-purple-600">
             AI
@@ -87,12 +87,12 @@ function SocialImages() {
           Image Creator
         </h2>
       </div>
-      <div className="flex flex-col gap-12 w-[70%]">
+      <div className="flex flex-col gap-12 w-[85%] sm:w-[70%]">
         <div className="flex flex-col gap-4">
-          <h3 className="text-2xl font-bold"> Upload an Image</h3>
+          <h3 className="text-base sm:text-lg md:text-2xl font-bold"> Upload an Image</h3>
           <input
             type="file"
-            className="file:bg-[#605dfe] file:text-[#1a1a1a] cursor-pointer file:px-4 file:py-3 file:font-bold rounded-lg border-1 border-[#605dfe] bg-gray-700/30"
+            className="file:bg-[#605dfe] file:text-[#1a1a1a] cursor-pointer file:px-4 file:py-3 file:font-bold rounded-lg border-1 border-[#605dfe] bg-gray-700/30 text-sm sm:text-lg"
             onChange={(e) => {
               handleImageUpload(e.target.files[0]);
             }}
@@ -104,7 +104,7 @@ function SocialImages() {
         {isImageLoaded && (
           <div className="flex flex-col gap-12">
             <div className="flex flex-col gap-4">
-              <h3 className="text-2xl font-bold">
+              <h3 className="text-base sm:text-lg md:text-2xl font-bold">
                 {" "}
                 Select a social Media Image Format
               </h3>
@@ -122,7 +122,7 @@ function SocialImages() {
             </div>
             {imagePublicId && (
               <div className="flex flex-col gap-4">
-                <h3 className="text-2xl font-bold"> Image Preview</h3>
+                <h3 className="text-base sm:text-lg md:text-2xl font-bold"> Image Preview</h3>
                 <div className="relative">
                   {isTransforming && (
                     <div className="absolute inset-0 flex items-center justify-center bg-base-100 opacity-70 z-10">
@@ -144,7 +144,7 @@ function SocialImages() {
                 </div>
                 {!isTransforming && (
                   <button
-                    className="btn btn-outline btn-primary w-max rounded-xl text-lg mt-4"
+                    className="btn btn-outline btn-primary w-max rounded-xl text-sm sm:text-base md:text-lg mt-4"
                     onClick={handleImageDownload}
                   >
                     Download For {selectedFormat}

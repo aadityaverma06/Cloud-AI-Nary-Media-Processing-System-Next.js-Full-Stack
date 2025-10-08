@@ -71,7 +71,7 @@ function VideoCard({ video }) {
   }, [isPreviewReady, isHovered]);
   return (
     <div
-      className="flex flex-col gap-4 w-[393px] rounded-xl bg-gray-800/40 overflow-hidden shadow-[0_0_15px_0_rgba(0,0,0,0.6)] hover:translate-y-[-10px] transition duration-200"
+      className="flex flex-col gap-4 w-[339px] xl:w-[393px] rounded-xl bg-gray-800/40 overflow-hidden shadow-[0_0_15px_0_rgba(0,0,0,0.6)] hover:translate-y-[-10px] transition duration-200"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -97,10 +97,10 @@ function VideoCard({ video }) {
           <h2 className="text-xl">{video.title}</h2>
           <h3 className="text-base text-gray-400">{video.description}</h3>
         </div>
-        <p className="text-base text-gray-400">{`Uploaded ${dateFormatter(
+        <p className="text-base text-right text-gray-400">{`Uploaded ${dateFormatter(
           video.createdAt
         )}`}</p>
-        <div className="flex gap-24">
+        <div className="flex justify-between">
           <div className="flex gap-2 items-center">
             <IconFileUpload size={30} color={"#605dfe"} />
             <div className="flex flex-col gap-2 text-sm">
