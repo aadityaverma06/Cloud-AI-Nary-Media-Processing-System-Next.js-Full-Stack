@@ -116,7 +116,7 @@ function Layout({ children }) {
         ) : (
           <div className="flex gap-2 items-center text-base md:text-lg md:justify-between md:gap-4 pr-4 order-1 md:order-2 self-end md:self-center">
             <button
-              className="btn btn-outline btn-primary w-max rounded-xl"
+              className="btn btn-outline btn-primary w-max !rounded-xl"
               onClick={() => {
                 router.push("/login");
               }}
@@ -124,7 +124,7 @@ function Layout({ children }) {
               Login
             </button>
             <button
-              className="btn btn-outline btn-primary w-max rounded-xl"
+              className="btn btn-outline btn-primary w-max !rounded-xl"
               onClick={() => {
                 router.push("/signup");
               }}

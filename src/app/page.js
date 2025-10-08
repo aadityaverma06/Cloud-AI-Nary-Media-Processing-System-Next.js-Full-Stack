@@ -52,7 +52,7 @@ export default function Home() {
             </Link>
 
             <button
-              className="btn btn-outline btn-primary rounded-full p-5 w-max"
+              className="btn btn-outline btn-primary !rounded-full p-5 w-max"
               onClick={async () => {
                 try {
                   await session.end();
