@@ -1,5 +1,6 @@
 "use client";
-import { useSession, useUser } from "@clerk/nextjs";
+import { useSession } from "@clerk/nextjs";
+import { useUser } from "@clerk/clerk-react";
 import { IconUserPlus, IconLogin2, IconLogout2 } from "@tabler/icons-react";
 
 import Link from "next/link";
@@ -55,7 +56,7 @@ export default function Home() {
               className="btn btn-outline btn-primary !rounded-full p-5 w-max"
               onClick={async () => {
                 try {
-                  await session.end();
+                  await signOut();
                   toast.success("Logged out successfully");
                 } catch (error) {
                   toast.error(error.message);

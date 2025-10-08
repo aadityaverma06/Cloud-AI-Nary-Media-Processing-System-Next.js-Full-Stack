@@ -10,18 +10,18 @@ import {
 } from "@tabler/icons-react";
 import { NavLink } from "@/app/utils/navLinkTag";
 import { useUser } from "@clerk/clerk-react";
-import { useSession } from "@clerk/nextjs";
+import { useClerk } from "@clerk/nextjs";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
 function Layout({ children }) {
   const { user } = useUser();
-  const { session } = useSession();
+  const { signout } = useClerk();
   const [isLogoutButtonHovered, setIsLogoutButtonHovered] = useState(false);
   const userEmail = user?.primaryEmailAddress?.emailAddress;
   const router = useRouter();
   async function handleLogout() {
     try {
-      await session.end();
+      await signout();
       toast.success("Logged out successfully");
     } catch (error) {
       toast.error(error.message);
