@@ -27,8 +27,8 @@ export default function Home() {
               AI
             </span>{" "}
             automatically crop them according to prominent details (like face,
-            text etc.) optimized for social platforms like Instagram, Twitter,
-            Facebook etc.
+            text etc.) optimized for social platforms like Instagram, X,
+            Meta etc.
           </li>
           <li className="tracking-[-.01em]">
             Compress your Videos effortlessly using{" "}

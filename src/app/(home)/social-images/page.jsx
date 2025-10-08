@@ -11,9 +11,9 @@ function SocialImages() {
       width: 1080,
       height: 1350,
     },
-    "Twitter Post (16:9)": { width: 1200, height: 675 },
-    "Twitter Header (3:1)": { width: 1500, height: 500 },
-    "Facebook Cover (205:78)": {
+    "X Post (16:9)": { width: 1200, height: 675 },
+    "X Header (3:1)": { width: 1500, height: 500 },
+    "Meta Cover (205:78)": {
       width: 820,
       height: 312,
     },
