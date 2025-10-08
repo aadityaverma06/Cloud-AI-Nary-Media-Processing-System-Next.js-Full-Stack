@@ -15,13 +15,13 @@ import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
 function Layout({ children }) {
   const { user } = useUser();
-  const { signout } = useClerk();
+  const clerk = useClerk();
   const [isLogoutButtonHovered, setIsLogoutButtonHovered] = useState(false);
   const userEmail = user?.primaryEmailAddress?.emailAddress;
   const router = useRouter();
   async function handleLogout() {
     try {
-      await signout();
+       await clerk.signOut({ redirectUrl: "/home" });
       toast.success("Logged out successfully");
     } catch (error) {
       toast.error(error.message);
