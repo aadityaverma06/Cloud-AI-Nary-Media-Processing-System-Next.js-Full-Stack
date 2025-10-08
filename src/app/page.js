@@ -1,13 +1,13 @@
 "use client";
-import { useSession } from "@clerk/nextjs";
 import { useUser } from "@clerk/clerk-react";
+import { useClerk } from "@clerk/nextjs";
 import { IconUserPlus, IconLogin2, IconLogout2 } from "@tabler/icons-react";
 
 import Link from "next/link";
 import toast from "react-hot-toast";
 export default function Home() {
   const { user } = useUser();
-  const { session } = useSession();
+ const { signout } = useClerk();
   return (
     <div className="flex flex-col min-h-screen p-5 xs:p-10 font-[family-name:var(--font-geist-sans)] justify-center items-center gap-12">
       <main className="flex flex-col gap-[32px] row-start-2 items-center max-w-[520px]">
@@ -56,7 +56,7 @@ export default function Home() {
               className="btn btn-outline btn-primary !rounded-full p-5 w-max"
               onClick={async () => {
                 try {
-                  await signOut();
+                  await signout();
                   toast.success("Logged out successfully");
                 } catch (error) {
                   toast.error(error.message);
