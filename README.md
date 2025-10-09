@@ -1,6 +1,6 @@
-# Cloud-AI-Nary Media Utility System
+# Cloud-AI-Nary Media Processing System
 
-The Web App is a smart, AI-powered Media Utility system designed to provide processing features for images and videos.
+The Web App is a smart, AI-powered Media Processing system designed to provide processing features for images and videos.
 
 ## ✅ Features
 

@@ -99,7 +99,7 @@ export default function Home() {
         <span className="bg-clip-text font-bold bg-gradient-to-r text-transparent  from-orange-500 via-pink-600 to-purple-600">
           AI
         </span>{" "}
-        - Nary Media Utility System. All rights reserved.
+        - Nary Media Processing System. All rights reserved.
       </footer>
     </div>
   );
