@@ -19,7 +19,7 @@ The Web App is a smart, AI-powered Media Processing system designed to provide p
 - React.js
 - Node.js
 - Tailwind CSS
-- Aceternity UI / Daisy UI
+- Daisy UI
 - Zustand
 - Axios (For API Calls)
 - NeonDb (PostgreSQL)
