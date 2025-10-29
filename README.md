@@ -22,7 +22,7 @@ The Web App is a smart, AI-powered Media Processing system designed to provide p
 - Daisy UI
 - Zustand
 - Axios (For API Calls)
-- NeonDb (PostgreSQL)
+- NeonDb (PostgreSQL) / Prisma ORM
 
 ## Installation / Access
 
